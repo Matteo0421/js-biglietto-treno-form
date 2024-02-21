@@ -7,13 +7,13 @@ const inputAge = document.querySelector('.inputAge');
 
 const costoKm = 0.21;
 
-const scontoMinori = 0.20;
+const scontoMinori = 20;
 
-const scontoOver65 = 0.40;
+const scontoOver65 = 40;
 
 
 let nameValue,  kmValue, ageValue, scontoBiglietto, bigliettoScontato;
-let messageDiscount, message;
+let messageDiscount = '', message;
 let finalPrice;
 // BUTTONS
 const btngenera = document.querySelector('.btngenera');
@@ -32,5 +32,19 @@ btngenera.addEventListener('click',function(){
  console.log(price);
 
  finalPrice = price;
+
+ if(ageValue < 18){
+  finalPrice *= 1 - (scontoMinori / 100);
+
+  messageDiscount =`  Avete diritto ad una promozione perche siete clienti under18, quindi sara applicato uno sconto del 20% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${finalPrice.toFixed(2)} €
+  `
+  } else if (ageValue >= 65){
+    finalPrice == 1 - (scontoOver65 / 100);
+    messageDiscount = `  Avete diritto ad una promozione perche siete clienti over65, quindi sara applicato uno sconto del 40% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${finalPrice.toFixed(2)} €
+    `
+  }
+  message = `Con ${kmValue} km il prezzo del biglietto è di € ${price.toFixed(2)}`;
+  message += messageDiscount;
+  console.log(message);
 })
 
