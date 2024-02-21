@@ -48,7 +48,7 @@ btngenera.addEventListener('click',function(){
   message = `Con ${kmValue} km il prezzo del biglietto è di € ${price.toFixed(2)}`;
   message += messageDiscount;
   console.log(message);
-
+  output.classList.toggle
   output.innerHTML =message;
 })
 
