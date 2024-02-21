@@ -45,10 +45,10 @@ btngenera.addEventListener('click',function(){
     messageDiscount = `  Avete diritto ad una promozione perche siete clienti over65, quindi sara applicato uno sconto del 40% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${finalPrice.toFixed(2)} €
     `
   }
-  message = `Con ${kmValue} km il prezzo del biglietto è di € ${price.toFixed(2)}`;
+  message = `${nameValue} biglietto Standard   € ${price.toFixed(2)}`;
   message += messageDiscount;
   console.log(message);
-  output.classList.toggle
+  // output.classList.toggle ('.d-block')
   output.innerHTML =message;
 })
 
