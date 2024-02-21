@@ -48,3 +48,4 @@ btngenera.addEventListener('click',function(){
   console.log(message);
 })
 
+document.querySelector('.output').innerHTML = message;
