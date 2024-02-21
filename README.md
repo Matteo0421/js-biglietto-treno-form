@@ -16,3 +16,8 @@ Il recap dei dati e l’output del prezzo finale, andranno quindi stampati in pa
 
 ===
 ## PROCEDIMENTO
+
+1. creare i due imput 
+2. calcolare il costo del biglietto intero e scontato
+3. creare il bottone
+4.
