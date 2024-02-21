@@ -19,6 +19,7 @@ let messageDiscount = '', message;
 let finalPrice;
 // BUTTONS
 const btngenera = document.querySelector('.btngenera');
+const btnannulla = document.querySelector('.btnannulla');
 
 btngenera.addEventListener('click',function(){
  nameValue = inputName.value;
@@ -50,5 +51,6 @@ btngenera.addEventListener('click',function(){
   console.log(message);
   // output.classList.toggle ('.d-block')
   output.innerHTML =message;
+
 })
 
