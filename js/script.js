@@ -11,6 +11,8 @@ const scontoMinori = 20;
 
 const scontoOver65 = 40;
 
+const output = document.querySelector('.output');
+
 
 let nameValue,  kmValue, ageValue, scontoBiglietto, bigliettoScontato;
 let messageDiscount = '', message;
@@ -48,4 +50,4 @@ btngenera.addEventListener('click',function(){
   console.log(message);
 })
 
-document.querySelector('.output').innerHTML = message;
+output.innerHTML = message;
