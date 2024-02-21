@@ -1,17 +1,36 @@
 // INPUT
-const input1 = document.querySelector('.input1');
+const inputName = document.querySelector('.inputName');
 
-const input2 = document.querySelector('.input2');
+const inputKm = document.querySelector('.inputKm');
 
-const input3 = document.querySelector('.input3');
+const inputAge = document.querySelector('.inputAge');
 
-let valoreNome;
+const costoKm = 0.21;
 
+const scontoMinori = 0.20;
+
+const scontoOver65 = 0.40;
+
+
+let nameValue,  kmValue, ageValue, scontoBiglietto, bigliettoScontato;
+let messageDiscount, message;
+let finalPrice;
 // BUTTONS
 const btngenera = document.querySelector('.btngenera');
 
-
 btngenera.addEventListener('click',function(){
- valoreNome = input1.value;
- console.log(valoreNome);
+ nameValue = inputName.value;
+
+ kmValue = inputKm.value;
+
+ ageValue = inputAge.value;
+
+ console.log(nameValue, kmValue, ageValue);
+
+ const price = kmValue * costoKm;
+
+ console.log(price);
+
+ finalPrice = price;
 })
+
