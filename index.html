@@ -22,36 +22,40 @@
 
   <h1 class="text-center ">BIGLIETTERIA</h1>
 
-  <input type="text" class="inputName form-control w-25 " placeholder="Nome e Cognome">
-  <input type="text" class="inputKm form-control w-25 " placeholder="KM da percorrere">
+  <div class="row">
+    <div class="col d-flex justify-content-between  ">
 
-  <select name="fascia-eta"  id="inputAge">
-    <option value="minorenne">minorenne</option>
-    <option value="maggiorenne" selected>maggiorenne</option>
-    <option value="over65">over65</option>
+    <input type="text" class="inputName form-control w-50 " placeholder="Nome e Cognome">
+    <input type="text" class="inputKm form-control w-50 " placeholder="KM da percorrere">
+
+    <select name="fascia-eta"  id="inputAge">
+     <option value="minorenne">minorenne</option>
+     <option value="maggiorenne" selected>maggiorenne</option>
+     <option value="over65">over65</option>
   </select>
+    </div>
+  </div>
 
-
- <button class="btngenera btn btn-primary">Genera</button>
- <button class="btnannulla btn btn-primary">Annulla</button>
-
-  <!-- <h2>IL MIO BIGLIETTO</h2>
-
-  <div class="output bg-danger fs-1  "></div> -->
+<div class="row">
+  <div class="col text-center p-3 ">
+    <button class="btngenera btn btn-primary m-3 ">Genera</button>
+    <button class="btnannulla btn btn-primary">Annulla</button>
+  </div>
+</div>
 
 <section id="card-biglietto" class="hidden">
-  <h2>IL MIO BIGLIETTO</h2>
-  <div id="biglietto">
-    <h2>dettaglio Passeggeri</h2>
-    <div class="dati">
+  <h2 class="text-center p-3 ">IL MIO BIGLIETTO</h2>
+  <div id="biglietto" >
+    <h2  class="text-center p-3 ">dettaglio Passeggeri</h2>
+    <div class="dati d-flex justify-content-between ">
       <div class="nome">
-        <h2>nome passeggero</h2>
-        <h3 id="nome-passeggero">matteo</h3>
+        <p class="fs-4 text-danger  ">nome passeggero</p>
+        <span id="nome-passeggero" >matteo</span>
       </div>
       <div class="offerta">
         <table>
           <thead>
-            <tr>
+            <tr class="m-5 ">
               <th>Offerta</th>
               <th>Carrozza</th>
               <th>Codice CP</th>
