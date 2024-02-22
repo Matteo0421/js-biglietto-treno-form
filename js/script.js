@@ -41,15 +41,15 @@ btngenera.addEventListener('click',function(){
 
   messageDiscount =`  Avete diritto ad una promozione perche siete clienti under18, quindi sara applicato uno sconto del 20% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${finalPrice.toFixed(2)} €
   `
-  } else if (ageValue >= 65){
-    finalPrice == 1 - (scontoOver65 / 100);
+  } else if (ageValue > 65){
+    finalPrice *= 1 - (scontoOver65 / 100);
     messageDiscount = `  Avete diritto ad una promozione perche siete clienti over65, quindi sara applicato uno sconto del 40% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${finalPrice.toFixed(2)} €
     `
   }
   message = `${nameValue} biglietto Standard   € ${price.toFixed(2)}`;
   message += messageDiscount;
   console.log(message);
-  // output.classList.toggle ('.d-block')
+  // output.classList.toggle ('.d-none');
   output.innerHTML =message;
 
 })
