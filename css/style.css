@@ -1,4 +1,9 @@
-.output{
-  width: 100%;
-  height: 500px;
+.hidden {
+  opacity: 0;
+  transition: 0.1s;
+}
+
+.show{
+  opacity: 1;
+  transition: 0.1s;
 }

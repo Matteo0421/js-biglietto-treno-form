@@ -55,4 +55,11 @@ btngenera.addEventListener('click',function(){
   document.getElementById( 'costo') .innerHTML = finalPrice;
   document.getElementById( 'carrozza').innerHTML = numCarrozza;
   document.getElementById('codice-cp').innerHTML = codiceCP;
+
+  document.getElementById('card-biglietto').className = 'show';
+})
+
+btnannulla.addEventListener( 'click', function(){
+
+  document.getElementById('card-biglietto').className = 'hidden';
 })
