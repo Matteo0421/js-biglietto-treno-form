@@ -22,21 +22,56 @@
 
   <h1 class="text-center ">BIGLIETTERIA</h1>
 
-  <form action="" class="d-flex justify-content-between ">
   <input type="text" class="inputName form-control w-25 " placeholder="Nome e Cognome">
   <input type="text" class="inputKm form-control w-25 " placeholder="KM da percorrere">
-  <input type="text" class="inputAge form-control w-25 " placeholder="età">
 
-
- </form>
+  <select name="fascia-eta"  id="inputAge">
+    <option value="minorenne">minorenne</option>
+    <option value="maggiorenne" selected>maggiorenne</option>
+    <option value="over65">over65</option>
+  </select>
 
 
  <button class="btngenera btn btn-primary">Genera</button>
  <button class="btnannulla btn btn-primary">Annulla</button>
 
-  <h2>IL MIO BIGLIETTO</h2>
+  <!-- <h2>IL MIO BIGLIETTO</h2>
 
-  <div class="output bg-danger fs-1  "></div>
+  <div class="output bg-danger fs-1  "></div> -->
+
+<section id="card-biglietto">
+  <h2>IL MIO BIGLIETTO</h2>
+  <div id="biglietto">
+    <h2>dettaglio Passeggeri</h2>
+    <div class="dati">
+      <div class="nome">
+        <h2>nome passeggero</h2>
+        <h3 id="nome-passeggero">matteo</h3>
+      </div>
+      <div class="offerta">
+        <table>
+          <thead>
+            <tr>
+              <th>Offerta</th>
+              <th>Carrozza</th>
+              <th>Codice CP</th>
+              <th>Costo biglietto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span id="offerta-applicata">1</span></td>
+              <td><span id="carrozza">2</span></td>
+              <td><span id="codice-cp">3</span></td>
+              <td><span id="costo">4</span></td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
 
 
   <script src="js/script.js"></script>

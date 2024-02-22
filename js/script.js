@@ -3,7 +3,7 @@ const inputName = document.querySelector('.inputName');
 
 const inputKm = document.querySelector('.inputKm');
 
-const inputAge = document.querySelector('.inputAge');
+const inputAge = document.querySelector('#inputAge');
 
 const costoKm = 0.21;
 
@@ -15,8 +15,8 @@ const output = document.querySelector('.output');
 
 
 let nameValue,  kmValue, ageValue, scontoBiglietto, bigliettoScontato;
-let messageDiscount = '', message;
 let finalPrice;
+let tipoBiglietto = 'Biglietto Standard'
 // BUTTONS
 const btngenera = document.querySelector('.btngenera');
 const btnannulla = document.querySelector('.btnannulla');
@@ -24,7 +24,7 @@ const btnannulla = document.querySelector('.btnannulla');
 btngenera.addEventListener('click',function(){
  nameValue = inputName.value;
 
- kmValue = inputKm.value;
+ kmValue = parseInt(inputKm.value);
 
  ageValue = inputAge.value;
 
@@ -36,21 +36,23 @@ btngenera.addEventListener('click',function(){
 
  finalPrice = price;
 
- if(ageValue < 18){
+ if(ageValue === 'minorenne'){
   finalPrice *= 1 - (scontoMinori / 100);
-
-  messageDiscount =`  Avete diritto ad una promozione perche siete clienti under18, quindi sara applicato uno sconto del 20% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${finalPrice.toFixed(2)} €
-  `
-  } else if (ageValue > 65){
+  tipoBiglietto = 'Biglietto Young';
+  } else if (ageValue === 'over65'){
     finalPrice *= 1 - (scontoOver65 / 100);
-    messageDiscount = `  Avete diritto ad una promozione perche siete clienti over65, quindi sara applicato uno sconto del 40% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${finalPrice.toFixed(2)} €
-    `
+    tipoBiglietto = 'Biglietto Silver';
+
   }
-  message = `${nameValue} biglietto Standard   € ${price.toFixed(2)}`;
-  message += messageDiscount;
-  console.log(message);
-  // output.classList.toggle ('.d-none');
-  output.innerHTML =message;
+  console.log(finalPrice, tipoBiglietto);
 
+  // genero gli elemnti random
+  const numCarrozza = Math.ceil(Math.random() * 12);
+  const codiceCP = Math.floor(Math.random() * (100000 - 90000)) + 90000;
+
+  document.getElementById ( 'nome-passeggero'). innerHTML = nameValue ;
+  document.getElementById( 'offerta-applicata'). innerHTML = tipoBiglietto;
+  document.getElementById( 'costo') .innerHTML = finalPrice;
+  document.getElementById( 'carrozza').innerHTML = numCarrozza;
+  document.getElementById('codice-cp').innerHTML = codiceCP;
 })
-
